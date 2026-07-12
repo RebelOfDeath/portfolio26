@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# JetBrains IDE
+.idea/
+
+# LaTeX build artifacts (compiled by CI; only cv.pdf is kept)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+cv/*.toc

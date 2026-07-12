@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roham Koohestani</title>
+  <meta name="description" content="Roham Koohestani is an AI4SE researcher and software engineer working on large language models for code, developer-AI interaction, and agentic systems." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav__brand" href="index.html"><b>roham</b>.koohestani</a>
+    <div class="nav__links">
+      <a class="hide-sm" href="#work">work</a>
+      <a class="hide-sm" href="#research">research</a>
+      <a href="academic.html">academic</a>
+      <a class="is-cta" href="cv/cv.pdf">CV</a>
+      <a class="is-cta" href="mailto:roham.koohestani@jetbrains.com">email</a>
+    </div>
+  </nav>
+
+  <aside class="rail" aria-hidden="true">
+    <div class="rail__item is-active" data-year="2026">2026</div>
+    <div class="rail__item" data-year="2025">2025</div>
+    <div class="rail__item" data-year="2024">2024</div>
+    <div class="rail__item" data-year="2023">2023</div>
+    <div class="rail__item" data-year="2022">2022</div>
+  </aside>
+
+  <!-- ============================================================ HERO -->
+  <header class="hero station" data-year="2026" id="top">
+    <canvas id="hero-canvas"></canvas>
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <p class="hero__eyebrow"><span class="dot">&#9679;</span> ai4se researcher &middot; software engineer</p>
+          <h1>I build AI that <span class="hl">earns developer trust</span>.</h1>
+          <p class="hero__sub">Researcher at <b>JetBrains Research</b> and MSc student at <b>TU Delft</b>. I work across large language models, developer tooling, and human-AI interaction.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#research">See the work</a>
+            <a class="btn" href="academic.html">Publications</a>
+          </div>
+        </div>
+        <figure class="portrait reveal">
+          <img src="assets/roham.jpeg" alt="Portrait of Roham Koohestani" />
+          <figcaption class="portrait__tag"><b>RK</b> &middot; Den Haag, NL</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>// scroll</span> to trace the history &#8595;</div>
+  </header>
+
+  <!-- ============================================================ WHAT I WORK ON -->
+  <section class="station" data-year="2026" id="work">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// now</span> &middot; the through line</p>
+      <h2 class="reveal">Three questions drive the work.</h2>
+      <p class="lead reveal">One thread runs through everything I have built: how do we make AI assistance in software engineering something a developer can rely on, and prove that it is.</p>
+      <div class="pillars">
+        <div class="pillar reveal d1">
+          <p class="q">question 01</p>
+          <h3 class="tk-teal">What do developers need?</h3>
+          <p>The empirical side. What makes a developer trust or reject an AI suggestion, and when does model confidence matter at all.</p>
+        </div>
+        <div class="pillar reveal d2">
+          <p class="q">question 02</p>
+          <h3 class="tk-orange">What can we guarantee?</h3>
+          <p>The formal side. What assurances hold for systems that are stochastic by design, from single models to multi-agent pipelines.</p>
+        </div>
+        <div class="pillar reveal d3">
+          <p class="q">question 03</p>
+          <h3 class="tk-pink">Does it ship?</h3>
+          <p>The impact side. Validation inside real IDEs at production scale, not on toy benchmarks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ JETBRAINS / CALIBRATION -->
+  <section class="station" data-year="2025" id="research">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2025</span> &middot; <span class="k">jetbrains research</span></p>
+      <h2 class="reveal">Research at production scale.</h2>
+      <p class="prose reveal">As a research intern at JetBrains, I asked a direct question: can a model's confidence tell a developer when to trust its code. The answer was not simple. Post-hoc calibration sharpens the signal, but a model's confidence is not the same thing as a developer's acceptance.</p>
+      <div class="statline reveal">
+        <span class="bignum" data-count="24000000" data-final="24M+">0</span>
+        <span class="bignum-label">real-world IDE interactions analyzed, across 750,000+ devices and three languages</span>
+      </div>
+      <div class="viz reveal" data-year-ignore>
+        <svg viewBox="0 0 640 260" role="img" aria-label="Reliability diagram: perfect calibration, uncalibrated model, and calibrated model curves.">
+          <line x1="60" y1="220" x2="600" y2="220" stroke="#3C3F41" stroke-width="1"/>
+          <line x1="60" y1="220" x2="60" y2="20" stroke="#3C3F41" stroke-width="1"/>
+          <line x1="60" y1="220" x2="600" y2="20" stroke="#9DA0AA" stroke-width="1" stroke-dasharray="4 5"/>
+          <path d="M60 220 C 220 218, 380 215, 470 195 S 560 90, 600 42" fill="none" stroke="#FF318C" stroke-width="2.5" stroke-dasharray="6 3" opacity="0.85"/>
+          <path class="calib-curve" d="M60 220 C 200 200, 300 120, 420 96 S 560 60, 600 44" fill="none" stroke="#28B8A0" stroke-width="3" pathLength="1"/>
+          <text x="66" y="16" font-family="'JetBrains Mono',monospace" font-size="11" fill="#9DA0AA">acceptance</text>
+          <text x="470" y="236" font-family="'JetBrains Mono',monospace" font-size="11" fill="#9DA0AA">model confidence</text>
+          <text x="430" y="86" font-family="'JetBrains Mono',monospace" font-size="11" fill="#28B8A0">calibrated</text>
+          <text x="300" y="120" font-family="'JetBrains Mono',monospace" font-size="11" fill="#9DA0AA">perfect</text>
+          <text x="310" y="200" font-family="'JetBrains Mono',monospace" font-size="11" fill="#FF318C">uncalibrated</text>
+        </svg>
+        <p class="viz__cap">Calibration reduces overconfidence, yet acceptance depends on human factors beyond correctness. Developers preferred color-coded reliability cues over raw probabilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ AGENTGUARD / AGENT LINE -->
+  <section class="station" data-year="2025">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2025</span> &middot; <span class="k">a bet placed early</span></p>
+      <h2 class="reveal">When agents multiplied, I asked what breaks first.</h2>
+      <p class="prose reveal">My answer was safety. <strong>AgentGuard</strong>, my first single-author paper, argued for verifying agents at runtime rather than trusting them by default. It builds a probabilistic model of an agent's behavior from its execution traces and checks quantitative properties against it. That question grew into a research line: an automated abstraction mechanism (<span class="tk-purple">TriCEGAR</span>) and a formal theory of what an agent can be once you constrain its memory.</p>
+      <div class="viz reveal">
+        <svg viewBox="0 0 640 230" role="img" aria-label="An agent modeled as a small Markov decision process, with transitions revealed one by one.">
+          <defs>
+            <!-- filled, color-matched arrowheads; tip at x=7, refX=7 -->
+            <marker id="arr-teal"   markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0.5 L7,4 L0,7.5 Z" fill="#28B8A0"/></marker>
+            <marker id="arr-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0.5 L7,4 L0,7.5 Z" fill="#6B57FF"/></marker>
+            <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0.5 L7,4 L0,7.5 Z" fill="#FC801D"/></marker>
+            <marker id="arr-pink"   markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0.5 L7,4 L0,7.5 Z" fill="#FF318C"/></marker>
+          </defs>
+          <!-- plan → collect (teal, horizontal) -->
+          <path class="edge e1" d="M118 112 L280 112" fill="none" stroke="#28B8A0" stroke-width="2" marker-end="url(#arr-teal)"/>
+          <!-- collect → fix (purple, straight down) -->
+          <path class="edge e2" d="M308 140 L308 157" fill="none" stroke="#6B57FF" stroke-width="2" marker-end="url(#arr-purple)"/>
+          <!-- fix → plan (orange, bottom arc) -->
+          <path class="edge e3" d="M282 183 C 185 215, 90 215, 90 140" fill="none" stroke="#FC801D" stroke-width="2" marker-end="url(#arr-orange)"/>
+          <!-- collect → verify (pink, horizontal) -->
+          <path class="edge e4" d="M336 112 L510 112" fill="none" stroke="#FF318C" stroke-width="2" marker-end="url(#arr-pink)"/>
+          <!-- nodes drawn last so circles cover any path overshoot -->
+          <g class="gnode">
+            <circle cx="90"  cy="112" r="28" fill="#0b0b0d" stroke="#28B8A0" stroke-width="1.5"/>
+            <text x="90"  y="116" text-anchor="middle">plan</text>
+          </g>
+          <g class="gnode">
+            <circle cx="308" cy="112" r="28" fill="#0b0b0d" stroke="#6B57FF" stroke-width="1.5"/>
+            <text x="308" y="116" text-anchor="middle">collect</text>
+          </g>
+          <g class="gnode">
+            <circle cx="308" cy="183" r="26" fill="#0b0b0d" stroke="#FC801D" stroke-width="1.5"/>
+            <text x="308" y="187" text-anchor="middle">fix</text>
+          </g>
+          <g class="gnode">
+            <circle cx="538" cy="112" r="28" fill="#0b0b0d" stroke="#FF318C" stroke-width="1.5"/>
+            <text x="538" y="116" text-anchor="middle">verify</text>
+          </g>
+        </svg>
+        <p class="viz__cap">Dynamic Probabilistic Assurance: the question shifts from "will it fail?" to "what is the probability of failure within these constraints?"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ BENCHMARKING -->
+  <section class="station" data-year="2025" data-bars>
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2025</span> &middot; <span class="k">the long one</span></p>
+      <h2 class="reveal">If the ruler is wrong, every measurement is.</h2>
+      <p class="prose reveal">A review of 273 benchmarks for AI in software engineering, a semantic search tool to navigate them (<span class="tk-teal">BenchScout</span>), and a protocol for repairing the ones the field still relies on (<span class="tk-teal">BenchFrame</span>). When we rebuilt HumanEval with correct solutions and real edge cases, the leaderboard collapsed.</p>
+      <div class="statline reveal">
+        <span class="bignum tk-pink" style="color:var(--pink)">&minus;31%</span>
+        <span class="bignum-label">average pass@1 drop across models once the benchmark is repaired</span>
+      </div>
+      <div class="viz reveal">
+        <div class="bars">
+          <div class="bar-row" style="color:var(--gray);font-size:11px;margin-bottom:4px;"><span class="lab"></span><span style="padding-left:4px;">pass@1 (CodeQwen1.5-7B)</span><span></span></div>
+          <div class="bar-row">
+            <span class="lab">original</span>
+            <span class="bar-track"><span class="bar-fill f-before" data-w="87%"></span></span>
+            <span class="val">87.2%</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">repaired</span>
+            <span class="bar-track"><span class="bar-fill f-after" data-w="11%"></span></span>
+            <span class="val tk-pink" style="color:var(--pink);">11.0%</span>
+          </div>
+        </div>
+        <p class="viz__cap">One example: a top performer, CodeQwen1.5-7B, fell 76 points on the repaired benchmark, a signature of leakage rather than capability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CRAFT: HDC + UTGen -->
+  <section class="station" data-year="2024">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2024</span> &middot; <span class="k">learning the craft</span></p>
+      <h2 class="reveal">Where the research habit formed.</h2>
+      <p class="prose reveal">I joined the AISE Lab under Prof. Maliheh Izadi and started where curiosity pointed: hyperdimensional computing as a lightweight way to model how developers behave inside an IDE. Two early papers, a lot of freedom. My first paper, on making automatically generated unit tests understandable, landed at ICSE 2025. The idea was simple: a test only helps if a person can read it.</p>
+      <div class="code reveal">
+        <div class="code__bar"><i></i><i></i><i></i></div>
+        <pre><span class="cmt">// generated by a search-based tool</span>
+<span class="kw">void</span> <span class="old">test0</span>() { ... }
+
+<span class="cmt">// after UTGen: named for what it verifies</span>
+<span class="kw">void</span> <span class="fn new">testEqualsWithDifferentMinDamageValues</span>() {
+  <span class="cmt">// given / when / then, in plain terms</span>
+  Weapon sword = <span class="kw">new</span> Weapon(<span class="str">"sword"</span>, <span class="str">12</span>);
+  ...
+}</pre>
+      </div>
+      <p class="viz__cap reveal">In a controlled study, developers fixed up to 33% more bugs and spent up to 20% less time with the enhanced tests.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ GROUNDWORK -->
+  <section class="station" data-year="2023">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2023</span> &middot; <span class="k">the groundwork</span></p>
+      <h2 class="reveal">A degree, and a question about memory.</h2>
+      <p class="prose reveal">A BSc in Computer Science and Engineering at TU Delft (2023&ndash;2026), with a mathematics minor at the University of Amsterdam for the theory I kept reaching for. My bachelor thesis asked whether you can tell if a code model was trained on a given file. You often can, and the signal survives even after the code is refactored. The trick was to perturb code along its syntax tree instead of its raw tokens, so the calibration samples stay valid.</p>
+      <div class="viz reveal">
+        <svg viewBox="0 0 640 180" role="img" aria-label="An abstract syntax tree resolving from a line of source code.">
+          <line class="edge e1" x1="320" y1="40" x2="200" y2="100" stroke="#28B8A0" stroke-width="2"/>
+          <line class="edge e2" x1="320" y1="40" x2="440" y2="100" stroke="#6B57FF" stroke-width="2"/>
+          <line class="edge e3" x1="200" y1="100" x2="140" y2="150" stroke="#FC801D" stroke-width="2"/>
+          <line class="edge e3" x1="200" y1="100" x2="260" y2="150" stroke="#FC801D" stroke-width="2"/>
+          <line class="edge e4" x1="440" y1="100" x2="380" y2="150" stroke="#FF318C" stroke-width="2"/>
+          <line class="edge e4" x1="440" y1="100" x2="500" y2="150" stroke="#FF318C" stroke-width="2"/>
+          <g class="gnode">
+            <circle cx="320" cy="40" r="18" fill="#0b0b0d" stroke="#28B8A0" stroke-width="1.5"/>
+            <circle cx="200" cy="100" r="16" fill="#0b0b0d" stroke="#6B57FF" stroke-width="1.5"/>
+            <circle cx="440" cy="100" r="16" fill="#0b0b0d" stroke="#6B57FF" stroke-width="1.5"/>
+            <circle cx="140" cy="150" r="13" fill="#0b0b0d" stroke="#FC801D" stroke-width="1.5"/>
+            <circle cx="260" cy="150" r="13" fill="#0b0b0d" stroke="#FC801D" stroke-width="1.5"/>
+            <circle cx="380" cy="150" r="13" fill="#0b0b0d" stroke="#FF318C" stroke-width="1.5"/>
+            <circle cx="500" cy="150" r="13" fill="#0b0b0d" stroke="#FF318C" stroke-width="1.5"/>
+          </g>
+        </svg>
+        <p class="viz__cap">AST-guided perturbation: provenance survives refactoring. Published at FSE Companion 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ORIGIN: SYNTHO -->
+  <section class="station" data-year="2022">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// 2022</span> &middot; <span class="k">where it started</span></p>
+      <h2 class="reveal">Structure out of noise.</h2>
+      <p class="prose reveal">It began at Syntho, first as a high-school intern and then as a software engineer, working on synthetic data and fairness. Designing methods to generate data that is useful without being harmful is where building and researching stopped being two separate activities for me. Everything after this is a variation on the same instinct: understand a system well enough to make it better.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ PERSONAL -->
+  <section class="station">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// away from the screen</span></p>
+      <h2 class="reveal">The rest of it.</h2>
+      <p class="prose reveal">I sing and play music, I train and dance bachata, and I cook. I move between three languages depending on the room. The through line is the same as the work: I like understanding how something functions well enough to improve it.</p>
+      <div class="tags reveal">
+        <span>music</span><span>gym</span><span>bachata</span><span>cooking</span>
+        <span class="tk-teal">فارسی</span><span class="tk-teal">english</span><span class="tk-teal">nederlands</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CLOSE -->
+  <section class="station close">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="cmt">// contact</span></p>
+      <h2 class="reveal">Let us build something.</h2>
+      <p class="prose reveal">If you work on language models for code, developer-AI interaction, or agentic systems, I would like to hear from you.</p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="academic.html">Academic page</a>
+        <a class="btn" href="mailto:roham.koohestani@jetbrains.com">Email me</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=xDkfR7UAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__links">
+        <a href="academic.html">Academic</a>
+        <a href="mailto:roham.koohestani@jetbrains.com">Email</a>
+        <a href="https://github.com/RebelOfDeath">GitHub</a>
+        <a href="https://www.linkedin.com/in/rohamkoohestani/">LinkedIn</a>
+        <a href="https://orcid.org/0009-0000-1649-9596">ORCID</a>
+      </div>
+      <div>&copy; <span id="yr">2026</span> Roham Koohestani &middot; built on black, in JetBrains colors</div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

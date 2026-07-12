@@ -1,0 +1,295 @@
+%% Roham Koohestani — Academic CV
+%% Style inspired by Kathryn T. Stolee (ktstolee.github.io)
+%% Compile: pdflatex cv.tex  (or use compile.sh)
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[top=0.85in,bottom=0.85in,left=1in,right=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = [rgb]{0.10,0.40,0.70},
+  linkcolor  = [rgb]{0.10,0.40,0.70},
+}
+
+% ── Page style ────────────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small Roham Koohestani}
+\fancyfoot[C]{\small \today}
+\fancyfoot[R]{\small \thepage\ of \pageref{LastPage}}
+
+% ── Layout ────────────────────────────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist{noitemsep, topsep=2pt, leftmargin=*}
+
+% ── Section heading ───────────────────────────────────────────────────────────
+\newcommand{\cvsection}[1]{%
+  \vspace{14pt}%
+  {\large\textbf{#1}}\\[-5pt]%
+  \rule{\linewidth}{0.4pt}%
+  \vspace{4pt}%
+}
+
+% ── Two-column entry (used for employment / education) ────────────────────────
+%    \cvrow{left content}{right content}
+\newcommand{\cvrow}[2]{%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    #1 & #2
+  \end{tabular*}%
+}
+
+% ── Publication entry  ────────────────────────────────────────────────────────
+%    \pub{tag}{authors}{title}{venue}{links}
+\newenvironment{publist}[1][0]{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{2.4em}%
+    \setlength{\itemsep}{6pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{4pt}%
+  }%
+}{\end{list}}
+
+
+% =============================================================================
+\begin{document}
+
+% ── Header ───────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\textbf{Roham Koohestani}}
+\end{center}
+\vspace{2pt}
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  Researcher, JetBrains Research (HAX Team)
+    & \href{mailto:roham.koohestani@jetbrains.com}{roham.koohestani@jetbrains.com} \\
+  AISE Lab, Delft University of Technology
+    & \href{https://rohamkoohestani.com}{rohamkoohestani.com} \\
+  The Hague, Netherlands
+    & \href{https://scholar.google.com/citations?user=xDkfR7UAAAAJ\&hl=en}{Google Scholar}
+      \,/\, \href{https://orcid.org/0009-0000-1649-9596}{ORCID}
+      \,/\, \href{https://github.com/RebelOfDeath}{GitHub} \\
+\end{tabular*}
+\vspace{4pt}
+\hrule
+
+% ── Research Interests ───────────────────────────────────────────────────────
+\cvsection{Research Interests}
+AI for software engineering: large language models for code, developer--AI interaction,
+and the verification of agentic systems.
+My aim is AI assistance that developers can trust, grounded in empirical evidence of
+what they need and in formal guarantees designed to serve those needs.
+
+% ── Employment ───────────────────────────────────────────────────────────────
+\cvsection{Employment}
+
+\cvrow{%
+  \textbf{JetBrains Research} \hspace{4pt} The Hague, Netherlands%
+}{2026 -- present}\\[1pt]
+\hspace*{12pt} Researcher, Human-AI Experience (HAX) team.
+Developer-centric trustworthy AI for software engineering.
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{JetBrains Research} \hspace{4pt} Amsterdam, Netherlands%
+}{2025 -- 2026}\\[1pt]
+\hspace*{12pt} Research Intern, Human-AI Experience team.
+In-IDE calibration of LLMs at production scale (JetBrains--TU Delft AI4SE collaboration).
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{AISE Lab, Delft University of Technology} \hspace{4pt} Delft, Netherlands%
+}{2024 -- present}\\[1pt]
+\hspace*{12pt} Research Assistant, supervised by Prof.\ Maliheh Izadi.
+Benchmarking, agent verification, and IDE personalization.
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{Syntho B.V.} \hspace{4pt} Amsterdam, Netherlands%
+}{2023 -- 2024}\\[1pt]
+\hspace*{12pt} Software Engineering Intern.
+Synthetic data generation, benchmarking, and time-series synthesis conditioned on metadata.
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{Syntho B.V.} \hspace{4pt} Amsterdam, Netherlands%
+}{2022 -- 2023}\\[1pt]
+\hspace*{12pt} High School Intern.
+Bias minimization and fairness in machine learning through synthetic data.
+
+% ── Education ────────────────────────────────────────────────────────────────
+\cvsection{Education}
+
+\cvrow{%
+  \textbf{MSc Computer Science} \hspace{4pt} Delft University of Technology%
+}{2026 -- present}\\[2pt]
+\hspace*{12pt}
+Thesis: AI-agent supported migration of legacy systems at the Dutch Inspectorate for
+Living Environment and Transport (ILT).\\
+\hspace*{12pt}
+Supervisor: Prof.\ Arie van Deursen.
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{Mathematics Minor} \hspace{4pt} University of Amsterdam%
+}{2025 -- present}\\[2pt]
+\hspace*{12pt}
+Number and set theory, theory of statistics, differential equations, information theory,
+and Markov chains.
+
+\vspace{8pt}
+\cvrow{%
+  \textbf{BSc Computer Science and Engineering} \hspace{4pt} Delft University of Technology%
+}{2023 -- 2026}\\[2pt]
+\hspace*{12pt}
+Data elective track.
+Bachelor thesis: AST-guided membership inference for code language models
+(published at FSE Companion 2026).
+
+% ── Publications ─────────────────────────────────────────────────────────────
+\cvsection{Publications}
+
+\textit{Author ordering follows contribution. \textbf{Bold} indicates the presenting / corresponding author
+where applicable. \underline{Underline} indicates Roham Koohestani.}
+
+\vspace{6pt}
+\textbf{Under Review}
+
+\begin{publist}
+\item[{[A2]}]
+  \underline{Roham Koohestani}, Ziyou Li, Anton Podkopaev, Maliheh Izadi.
+  \textit{Memory-Constrained Probabilistic Trace Models for Agentic AI.}
+  Formal Aspects of Computing (FAC). \textit{Under review.}
+  \href{https://arxiv.org/abs/2510.23487}{arXiv}
+
+\item[{[A1]}]
+  \underline{Roham Koohestani}, Ate\c{s} G\"{o}rpelio\u{g}lu, Egor Klimov,
+  Burcu Kulahcioglu Ozkan, Maliheh Izadi.
+  \textit{TriCEGAR: A Trace-Driven Abstraction Mechanism for Agentic AI.}
+  Preprint; co-first author.
+  \href{https://arxiv.org/abs/2601.22997}{arXiv} /
+  \href{https://zenodo.org/records/18338703}{artifact}
+\end{publist}
+
+\vspace{6pt}
+\textbf{Journal Publications}
+
+\begin{publist}
+\item[{[J1]}]
+  \underline{Roham Koohestani}, Philippe de Bekker, Beg\"{u}m Ko\c{c}, Maliheh Izadi.
+  \textit{Benchmarking AI Models in Software Engineering: A Review, Search Tool,
+  and Enhancement Protocol.}
+  IEEE Transactions on Software Engineering (TSE), 2025.
+  Journal-first presentation at FSE 2026.
+  \href{https://arxiv.org/abs/2503.05860}{arXiv} /
+  \href{https://github.com/AISE-TUDelft/AI4SE-benchmarks}{code} /
+  \href{https://evalpro.online/}{BenchScout}
+\end{publist}
+
+\vspace{6pt}
+\textbf{Conference Publications}
+
+\begin{publist}
+\item[{[C5]}]
+  \underline{Roham Koohestani}, Agnia Sergeyuk, David Gros, Claudio Spiess,
+  Sergey Titov, Prem Devanbu, Maliheh Izadi.
+  \textit{Does In-IDE Calibration of Large Language Models Work at Scale?}
+  FSE Companion 2026, Industry Track. Co-first author.
+  \href{https://doi.org/10.1145/3803437.3805234}{DOI} /
+  \href{https://arxiv.org/abs/2510.22614}{arXiv}
+
+\item[{[C4]}]
+  \underline{Roham Koohestani}, Ali Al-Kaswan, Jonathan Katzy, Maliheh Izadi.
+  \textit{AST-PAC: AST-guided Membership Inference for Code.}
+  FSE Companion 2026, IVR Track. From bachelor thesis.
+  \href{https://doi.org/10.1145/3803437.3805588}{DOI} /
+  \href{https://doi.org/10.5281/zenodo.18348152}{artifact}
+
+\item[{[C3]}]
+  \underline{Roham Koohestani}, Parham Bateni, Aydin Ebrahimi, Behdad Etezadi,
+  Kiarash Karimi, Maliheh Izadi.
+  \textit{Code4Me V2: A Research-oriented Code-completion Platform.}
+  ICSE Companion 2026, Demonstrations Track. Co-first author.
+  \href{https://doi.org/10.1145/3774748.3787616}{DOI} /
+  \href{https://arxiv.org/abs/2510.03755}{arXiv}
+
+\item[{[C2]}]
+  Amirhossein Deljouyi, \underline{Roham Koohestani}, Maliheh Izadi, Andy Zaidman.
+  \textit{Leveraging Large Language Models for Enhancing the Understandability of
+  Generated Unit Tests.}
+  ICSE 2025.
+  \href{https://arxiv.org/abs/2408.11710}{arXiv} /
+  \href{https://github.com/amirdeljouyi/UTGen}{code}
+
+\item[{[C1]}]
+  \underline{Roham Koohestani}, Maliheh Izadi.
+  \textit{HyperSeq: A Hyper-Adaptive Representation for Predictive Sequencing of States.}
+  FSE Companion 2025.
+  \href{https://doi.org/10.1145/3696630.3728526}{DOI} /
+  \href{https://github.com/hyperseq-replication/package}{code}
+\end{publist}
+
+\vspace{6pt}
+\textbf{Workshop Publications}
+
+\begin{publist}
+\item[{[W2]}]
+  \underline{Roham Koohestani}.
+  \textit{AgentGuard: Runtime Verification of AI Agents.}
+  ASE 2025 Workshops (SE Agents). Sole author.
+  \href{https://doi.org/10.1109/ASEW67777.2025.00023}{DOI} /
+  \href{https://arxiv.org/abs/2509.23864}{arXiv}
+
+\item[{[W1]}]
+  \underline{Roham Koohestani}, Maliheh Izadi.
+  \textit{Rethinking IDE Customization for Enhanced HAX: A Hyperdimensional Perspective.}
+  IDE Workshop 2025 (co-located with ICSE).
+  \href{https://doi.org/10.1109/IDE66625.2025.00007}{DOI}
+\end{publist}
+
+% ── Teaching ─────────────────────────────────────────────────────────────────
+\cvsection{Teaching}
+
+\cvrow{%
+  \textbf{Teaching Assistant} \hspace{4pt} Delft University of Technology%
+}{2024 -- 2026}\\[2pt]
+\hspace*{12pt}
+CS4570 Machine Learning for Software Engineering.\\[2pt]
+\hspace*{12pt}
+Supervised 50+ MSc students in research projects over two academic years, across
+a 10-week intensive group-research course.
+Coordinated assessment for a cohort of more than 130 students.
+
+% ── Service ──────────────────────────────────────────────────────────────────
+\cvsection{Service}
+
+\textit{Co-Reviewing --- Conferences \& Journals}\\[2pt]
+\hspace*{12pt} ICSE ('25, '26C1, '26C2), FSE ('25), ASE ('25), EMSE ('25), ISSTA ('26)
+
+\vspace{6pt}
+\textit{Reviewer --- Conference}\\[2pt]
+\hspace*{12pt} ICSME Industry Track 2026
+
+\vspace{6pt}
+\textit{Reviewer --- Workshops}\\[2pt]
+\hspace*{12pt} DeepLearning4Code Workshop @ NeurIPS 2025\\[1pt]
+\hspace*{12pt} DeepLearning4Code Workshop @ ICML 2026\\[1pt]
+\hspace*{12pt} FSE $\times$ AIWARE Competition --- Poisoned Chalice @ FSE 2026
+
+\vspace{6pt}
+\textit{Organizing}\\[2pt]
+\hspace*{12pt} Web-Chair, AgenticSE Workshop @ ASE 2025
+
+% ── End ──────────────────────────────────────────────────────────────────────
+\end{document}
