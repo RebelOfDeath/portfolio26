@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:          # allow manual runs from the Actions tab
+  repository_dispatch:        # lets talk repos (e.g. harmony-os-2026) trigger a redeploy
+    types: [talk-updated]
 
 permissions:
   contents: read
@@ -39,6 +41,16 @@ jobs:
           pdflatex -interaction=nonstopmode cv.tex
           pdflatex -interaction=nonstopmode cv.tex   # second pass → correct page count
           rm -f cv.aux cv.log cv.out cv.fls cv.fdb_latexmk
+
+      # Talks live in their own repos and are served under a subpath of this site.
+      - name: Fetch HarmonyOS 2026 talk
+        uses: actions/checkout@v4
+        with:
+          repository: RebelOfDeath/harmony-os-2026
+          path: harmony-os-2026
+
+      - name: Strip nested git metadata
+        run: rm -rf harmony-os-2026/.git
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
