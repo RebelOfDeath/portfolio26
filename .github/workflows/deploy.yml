@@ -49,8 +49,14 @@ jobs:
           repository: RebelOfDeath/harmony-os-2026
           path: harmony-os-2026
 
+      - name: Fetch Eurasian lynx monitoring talk
+        uses: actions/checkout@v4
+        with:
+          repository: RebelOfDeath/eurasian-lynx-monitoring
+          path: eurasian-lynx-monitoring
+
       - name: Strip nested git metadata
-        run: rm -rf harmony-os-2026/.git
+        run: rm -rf harmony-os-2026/.git eurasian-lynx-monitoring/.git
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
